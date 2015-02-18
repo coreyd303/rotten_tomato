@@ -23,7 +23,7 @@ RSpec.describe 'the user view', type: :feature do
       expect(page).to have_link('MovieYak Home')
       expect(page).to have_link('Future Box Office Rankings')
 
-      exect(page).to_not have_link('Last Weekends Box Office Results')
+      expect(page).to_not have_link('Last Weekends Box Office Results')
 
       click_link('MovieYak Home')
       expect(current_path).to eq('/')
