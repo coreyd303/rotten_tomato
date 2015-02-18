@@ -33,7 +33,7 @@ RSpec.describe 'the user view', type: :feature do
       expect(current_path).to eq('/')
       click_link('Future Box Office Rankings')
 
-      expect(current_path).to eq(future_path)
+      expect(current_path).to eq(futures_path)
       expect(page).to have_link('MovieYak Home')
       expect(page).to have_link('Last Weekends Box Office Results')
 
