@@ -11,19 +11,19 @@ RSpec.describe 'the user view', type: :feature do
       expect(current_path).to eq('/')
 
       expect(page).to have_content('Welcome to MovieYak')
-      expect(page).to have_link('Last Weekends Box Office Results')
+      expect(page).to have_link('Get Last Weekends Box Office Results')
       expect(page).to have_link('Future Box Office Rankings')
     end
 
     it 'sees the lasts weeks movie results page' do 
       expect(current_path).to eq('/')
-      click_link('Last Weekends Box Office Results')
+      click_link('Get Last Weekends Box Office Results')
 
       expect(current_path).to eq(results_path)
       expect(page).to have_link('MovieYak Home')
-      expect(page).to have_link('Future Box Office Rankings')
+      expect(page).to have_link('See Future Box Office Rankings')
 
-      expect(page).to_not have_link('Last Weekends Box Office Results')
+      expect(page).to_not have_link('Get Last Weekends Box Office Results')
 
       click_link('MovieYak Home')
       expect(current_path).to eq('/')
@@ -31,13 +31,13 @@ RSpec.describe 'the user view', type: :feature do
 
     it 'sees the future rankings page' do
       expect(current_path).to eq('/')
-      click_link('Future Box Office Rankings')
+      click_link('See Future Box Office Rankings')
 
       expect(current_path).to eq(futures_path)
       expect(page).to have_link('MovieYak Home')
-      expect(page).to have_link('Last Weekends Box Office Results')
+      expect(page).to have_link('Get Last Weekends Box Office Results')
 
-      expect(page).to_not have_link('Future Box Office Rankings')
+      expect(page).to_not have_link('See Future Box Office Rankings')
 
       click_link('MovieYak Home')
       expect(current_path).to eq('/')

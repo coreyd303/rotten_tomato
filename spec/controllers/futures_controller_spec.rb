@@ -8,4 +8,5 @@ RSpec.describe FuturesController, type: :controller do
       expect(response).to render_template('index')
     end
   end
+
 end

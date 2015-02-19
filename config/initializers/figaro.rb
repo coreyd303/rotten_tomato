@@ -1,0 +1,1 @@
+Figaro.require_keys("rotten_tomatoes_api_key")

@@ -3,5 +3,11 @@
 </div>
 <div>
   <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary"%>
-  <%= link_to "Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
+  <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
 </div>
+
+<h1>Movies</h1>
+<% @movies.each do |m| %>
+  <%= m.title %>
+  <br/><br/>
+<% end %>
