@@ -6,7 +6,7 @@ include RottenTomatoes
 
     if allowed_nums.include?(params[:num])
       Result.find_movies(params[:num])
-      @movies = Movie.all
+      @movies = Movie.first(params[:num])
     else
       flash[:danger] = "Please select a valid number of movies from the drop down!"
       redirect_to root_path
