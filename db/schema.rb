@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219203606) do
+ActiveRecord::Schema.define(version: 20150219221003) do
 
   create_table "movies", force: :cascade do |t|
-    t.string "poster_thumbnail_url"
-    t.string "title"
-    t.string "year"
-    t.string "mpaa_rating"
-    t.string "critics_rating"
-    t.string "critics_score"
-    t.string "audience_rating"
-    t.string "audience_score"
-    t.string "movie_details_url"
-    t.string "movie_reviews_url"
-    t.text   "synopsis"
+    t.string  "poster_thumbnail_url"
+    t.string  "title"
+    t.string  "year"
+    t.string  "mpaa_rating"
+    t.string  "critics_rating"
+    t.string  "critics_score"
+    t.string  "audience_rating"
+    t.string  "audience_score"
+    t.string  "movie_details_url"
+    t.string  "movie_reviews_url"
+    t.text    "synopsis"
+    t.integer "average_rank"
   end
 
 end

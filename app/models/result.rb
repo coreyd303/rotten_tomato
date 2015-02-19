@@ -26,6 +26,7 @@ class Result < ActiveRecord::Base
     m.critics_score        = tom[:ratings][:critics_score]
     m.audience_rating      = tom[:ratings][:audience_rating]
     m.audience_score       = tom[:ratings][:audience_score]
+    m.average_rank         = (m.critics_score.to_i + m.audience_score.to_i)/2
     m.synopsis             = tom.synopsis
     m.movie_details_url    = tom[:links][:alternate]
     m.movie_reviews_url    = tom[:links][:reviews]

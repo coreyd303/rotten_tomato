@@ -22,15 +22,19 @@
     <% if m.critics_rating == "Certified Fresh" %>
       <%= image_tag("certified.png", class: "certified") %>
     <% elsif m.critics_rating == "Fresh" %>
+      &nbsp
       <%= image_tag("fresh.png", class: "fresh") %>
     <% else %>
+      &nbsp
       <%= image_tag("rotten.png", class: "rotten") %>
     <% end %>&nbsp
     <%= m.critics_rating %>&nbsp<%= m.critics_score %>% (Critics)<br/>
 
     <% if m.audience_rating == "Upright" %>
+      &nbsp
       <%= image_tag("popcorn.png", class: "fresh") %>
     <% else %>
+      &nbsp
       <%= image_tag("spilled.png", class: "spilled") %>
     <% end %>&nbsp
     <%= m.audience_rating %>&nbsp<%= m.audience_score %>% (Audience)
