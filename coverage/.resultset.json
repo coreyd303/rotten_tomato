@@ -1,0 +1,297 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/coreydavis/rotten_tomatos/config/environment.rb": [
+        null,
+        1,
+        null,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/application.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/boot.rb": [
+        1,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/environments/test.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/assets.rb": [
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/backtrace_silencers.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/code_climate.rb": [
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/cookies_serializer.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/figaro.rb": [
+        1,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/filter_parameter_logging.rb": [
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/rotten_tomatoes.rb": [
+        1,
+        1,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/initializers/wrap_parameters.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/config/routes.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/futures_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/movies_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/movies_controller_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/rankings_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/results_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/static_pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/controllers/futures_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/controllers/results_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        2,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/controllers/static_pages_controller.rb": [
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/models/result.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        10,
+        0,
+        null,
+        10,
+        null,
+        null,
+        null,
+        null,
+        1,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        10,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/models/movie.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1424375056
+  }
+}

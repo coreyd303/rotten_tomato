@@ -11,13 +11,13 @@ RSpec.describe 'the user view', type: :feature do
       expect(current_path).to eq('/')
 
       expect(page).to have_content('Welcome to MovieYak')
-      expect(page).to have_link('Get Last Weekends Box Office Results')
+      expect(page).to have_button('Get Last Weekends Box Office Results')
       expect(page).to have_link('Future Box Office Rankings')
     end
 
     it 'sees the lasts weeks movie results page' do 
       expect(current_path).to eq('/')
-      click_link('Get Last Weekends Box Office Results')
+      click_button('Get Last Weekends Box Office Results')
 
       expect(current_path).to eq(results_path)
       expect(page).to have_link('MovieYak Home')
