@@ -23,7 +23,7 @@ RSpec.describe 'the user view', type: :feature do
       expect(page).to have_link('MovieYak Home')
       expect(page).to have_link('See Future Box Office Rankings')
 
-      expect(page).to_not have_link('Get Last Weekends Box Office Results')
+      expect(page).to_not have_button('Get Last Weekends Box Office Results')
 
       click_link('MovieYak Home')
       expect(current_path).to eq('/')
@@ -35,7 +35,7 @@ RSpec.describe 'the user view', type: :feature do
 
       expect(current_path).to eq(futures_path)
       expect(page).to have_link('MovieYak Home')
-      expect(page).to have_link('Get Last Weekends Box Office Results')
+      expect(page).to have_button('Get Last Weekends Box Office Results')
 
       expect(page).to_not have_link('See Future Box Office Rankings')
 

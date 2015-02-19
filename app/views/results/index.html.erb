@@ -1,13 +1,46 @@
-<div>
-  <h1>Last Weekends Box Office Results</h1>
-</div>
-<div>
-  <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary"%>
-  <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
-</div>
 
-<h1>Movies</h1>
-<% @movies.each do |m| %>
-  <%= m.title %>
-  <br/><br/>
-<% end %>
+
+
+
+<div class="container">
+  <h1>Last Weekends Top <%= @movies.count %> Box Office Ratings</h1>
+  <div class-"col-md-8">
+    <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary"%>
+    <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
+  </div>
+  <hr>
+  <% @movies.each do |m| %>
+  <div class="col-md-8">
+    <b><%= @movies.index(m)+1 %>)
+    <%= m.title %></b>&nbsp
+    (<i><%= m.year %></i>)&nbsp
+    Rated: <%= m.mpaa_rating %><br/>
+    <%= image_tag(m.poster_thumbnail_url) %>&nbsp
+    <%= truncate(m.synopsis, length: 90) %><br/><br/>
+    <%= link_to "Reviews", m.movie_reviews_url, class: "btn btn-info" %>
+    <%= link_to "More Info", m.movie_details_url, class: "btn btn-info" %>
+    <br/>
+  </div>
+  <div class="col-md-4">
+    Rotten Tomatoes&#0153; Scores<br/>
+    <% if m.critics_rating == "Certified Fresh" %>
+      <%= image_tag("certified.png", class: "certified") %>
+    <% elsif m.critics_rating == "Fresh" %>
+      <%= image_tag("fresh.png", class: "fresh") %>
+    <% else %>
+      <%= image_tag("rotten.png", class: "rotten") %>
+    <% end %>&nbsp
+    <%= m.critics_rating %>&nbsp<%= m.critics_score %>% (Critics)<br/>
+
+    <% if m.audience_rating == "Upright" %>
+      <%= image_tag("popcorn.png", class: "fresh") %>
+    <% else %>
+      <%= image_tag("spilled.png", class: "spilled") %>
+    <% end %>&nbsp
+    <%= m.audience_rating %>&nbsp<%= m.audience_score %>% (Audience)
+  </div>
+  <div class="col-lg-11">
+    <hr>
+  </div>
+  <% end %>
+</div>
