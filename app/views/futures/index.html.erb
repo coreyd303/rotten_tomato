@@ -1,7 +1,37 @@
-<div>
-  <h1>Future Box Office Rankings</h1>
-</div>
-<div>
-  <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary" %>
-  <%= link_to "Get Last Weekends Box Office Results", results_path, class: "btn btn-md btn-primary" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+    <h1>Future Box Office Rankings</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary" %>
+    </div>
+    <div class="col-md-4">
+    <%= form_tag("/results", method: "get") do %>
+      <%= submit_tag "Get Last Weekends Box Office Results", class: "btn btn-md btn-primary" %>
+      <%= select_tag(:num, options_for_select([[5], [10], [15], [20], [25]], 10)) %>
+    <% end %>
+    </div>
+  </div>
+  <hr>
+  <div class="table">
+    <thead>
+      <td>Title</td>
+      <td>current date</td>
+      <td>current date + 1 week</td>
+      <td>current date + 2 weeks</td>
+    </thead>
+    <tbody>
+      <% @movies.each do |m| %>
+      <tr>
+        <td><%= m.tile %></td>
+        <td><%= @movies.index(m)+1 %></td>
+        <td><%= @prediction %></td>
+        <td><%= @prediction %></td>
+        <td><%= @prediction %></td>
+      </td>
+    </tbody>
+
 </div>

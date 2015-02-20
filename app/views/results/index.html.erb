@@ -1,10 +1,20 @@
 <div class="container">
-  <h1>Last Weekends Top <%= @movies.count %> Box Office Ratings</h1>
-  <div class-"col-md-8">
-    <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary"%>
-    <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
+
+  <div class="row">
+    <div class="col-md-8">
+      <h1>Last Weekends Top <%= @movies.count %> Box Office Ratings</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary" %>
+    </div>
+    <div class="col-md-4">
+      <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
+    </div>
   </div>
   <hr>
+
   <% @movies.each do |m| %>
   <div class="col-md-8">
     <b><%= @movies.index(m)+1 %>)

@@ -1,7 +1,7 @@
 class Result < ActiveRecord::Base
 
   def self.find_movies(num)
-    tomatoes = RottenList.find(type: "box_office", limit: num.to_i)
+    tomatoes = RottenList.find(:type => "box_office", :limit => 25)
     save_to_db(tomatoes)
   end
 
