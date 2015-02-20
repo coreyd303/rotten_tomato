@@ -23,7 +23,10 @@
       <% end %>
     </div>
     <div class="col-md-4">
-      <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary" %>
+      <%= form_tag("/futures", method: "get") do %>
+        <%= submit_tag "See Future Box Office Rankings", class: "btn btn-md btn-primary" %>
+        <%= select_tag(:num, options_for_select([[2], [3], [4], [5]], 3)) %>
+      <% end %>
     </div>
   </div>
 </div>
