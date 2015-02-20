@@ -16,22 +16,22 @@
     </div>
   </div>
   <hr>
-  <div class="table">
+  <table class="table">
     <thead>
       <td>Title</td>
-      <td>current date</td>
-      <td>current date + 1 week</td>
-      <td>current date + 2 weeks</td>
+      <td><%= @date.strftime("%m/%d") %></td>
+      <td><%= (@date + 7).strftime("%m/%d") %></td>
+      <td><%= (@date + 14).strftime("%m/%d") %></td>
     </thead>
     <tbody>
       <% @movies.each do |m| %>
       <tr>
-        <td><%= m.tile %></td>
-        <td><%= @movies.index(m)+1 %></td>
-        <td><%= @prediction %></td>
-        <td><%= @prediction %></td>
-        <td><%= @prediction %></td>
-      </td>
+        <td><%= m.title %></td>
+        <td><%= @movies.index(m) + 1 %></td>
+        <td><%= @ranks[rand(0..2)] %></td>
+        <td><%= @ranks[rand(0..2)] %></td>
+      </tr>
+      <% end %>
     </tbody>
-
+  </table>
 </div>
