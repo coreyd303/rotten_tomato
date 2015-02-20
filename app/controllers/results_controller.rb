@@ -1,11 +1,10 @@
 class ResultsController < ApplicationController
-include RottenTomatoes
 
   def index
     allowed_nums = ["5","10","15","20","25"]
 
     if allowed_nums.include?(params[:num])
-      Result.find_movies(params[:num])
+      Result.find_movies(params[:num].to_i)
       @movies = ordered_movies
       request_checker
     else
