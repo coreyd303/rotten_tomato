@@ -1,16 +1,20 @@
 class FuturesController < ApplicationController
 
   def index
-    @movies = ordered_movies
-    @one_week = @movies.shuffle
-    @date   = DateTime.now
+    @movies   = ordered_movies
+    @week_one = movie_shuffler
+    @week_two = movie_shuffler
+    @date     = DateTime.now
   end
 
 private
 
   def ordered_movies
-    movies          = Movie.first(3)
-    ordered_by_rank = movies.sort { |x,y| y.average_rank <=> x.average_rank }
-    ordered_by_rank
+    movies = Movie.first(3)
+    movies.sort { |x,y| y.average_rank <=> x.average_rank }.map{ |m| m.title }
+  end
+
+  def movie_shuffler
+    @movies.shuffle
   end
 end
