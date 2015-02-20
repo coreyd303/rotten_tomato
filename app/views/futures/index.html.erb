@@ -28,8 +28,8 @@
       <tr>
         <td><%= m.title %></td>
         <td><%= @movies.index(m) + 1 %></td>
-        <td><%= @ranks[rand(0..2)] %></td>
-        <td><%= @ranks[rand(0..2)] %></td>
+        <td><%= @one_week.shuffle.index(m) + 1 %></td>
+        <td><%= @one_week.shuffle.index(m) + 1 %></td>
       </tr>
       <% end %>
     </tbody>
