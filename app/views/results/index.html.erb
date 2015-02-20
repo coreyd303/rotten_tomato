@@ -1,10 +1,10 @@
 <div class="container">
-
   <div class="row">
     <div class="col-md-8">
       <h1>Last Weekends Top <%= @movies.count %> Box Office Ratings</h1>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-2">
       <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary" %>
@@ -13,6 +13,7 @@
       <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary"%>
     </div>
   </div>
+
   <hr>
 
   <% @movies.each do |m| %>
@@ -27,6 +28,7 @@
     <%= link_to "More Info", m.movie_details_url, class: "btn btn-info" %>
     <br/>
   </div>
+
   <div class="col-md-4">
     Rotten Tomatoes&#0153; Scores<br/>
     <% if m.critics_rating == "Certified Fresh" %>
