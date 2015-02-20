@@ -3,9 +3,15 @@
     <div class="col-md-1">
       <%= image_tag("yak.jpg", class: "yak") %>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-5">
       <h1>Welcome to MovieYak</h1>
       <h4><i>Shaving the Yak so you don't have to!</i></h4>
+    </div>
+    <div class="col-md-2">
+      <p class="logo"><h4>Powered by:</h4></p>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag("rottentomatoes_logo_40.png", class: "logo") %>
     </div>
   </div>
   <hr>
@@ -18,17 +24,6 @@
     </div>
     <div class="col-md-4">
       <%= link_to "See Future Box Office Rankings", futures_path, class: "btn btn-md btn-primary" %>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-1">
-      <p class="logo"><h4>Powered by:</h4></p>
-    </div>
-    <div class="col-md-4">
-      <%= image_tag("rottentomatoes_logo_40.png", class: "logo") %>
     </div>
   </div>
 </div>
