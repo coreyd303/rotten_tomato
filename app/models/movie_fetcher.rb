@@ -6,12 +6,6 @@ class MovieFetcher
     fetch_movies
   end
 
-  def fetch_movies
-    key = Figaro.env.rotten_tomatoes_api_key
-    @response = HTTParty.get("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=#{key}&limit=#{@number_for_api}")
-    parse_response
-  end
-
   def save_to_db
     @movies.map do |movie|
       if checked_movies.include?(movie['title'])
@@ -23,6 +17,12 @@ class MovieFetcher
   end
 
 private
+
+  def fetch_movies
+    key = Figaro.env.rotten_tomatoes_api_key
+    @response = HTTParty.get("http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=#{key}&limit=#{@number_for_api}")
+    parse_response
+  end
 
   def parse_response
     @movies_from_api = JSON.parse(@response.body)['movies']
