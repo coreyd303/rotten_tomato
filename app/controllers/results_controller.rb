@@ -4,7 +4,7 @@ class ResultsController < ApplicationController
     allowed_nums = ["5","10","15","20","25"]
 
     if allowed_nums.include?(params[:num])
-      Result.find_movies(params[:num].to_i)
+      MovieFetcher.new(params[:num].to_i).save_to_db
       @movies = ordered_movies
       request_checker
     else
