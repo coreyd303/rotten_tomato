@@ -10,7 +10,7 @@ class FuturesController < ApplicationController
 private
 
   def ordered_movies
-    movies = Movie.first(params[:num])
+    movies = Movie.first(params[:num] || 10)
     movies.sort { |x,y| y.average_rank <=> x.average_rank }.map{ |m| m.title }
   end
 
