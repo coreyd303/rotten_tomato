@@ -16,6 +16,7 @@ gem 'figaro'
 group :development, :test do
   gem 'pry'
   gem 'sqlite3'
+  gem 'codeclimate-test-reporter', group: :test, require: nil
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -28,7 +29,6 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'codeclimate-test-reporter', group: :test, require: nil
   gem 'faker'
   gem 'webmock'
 end

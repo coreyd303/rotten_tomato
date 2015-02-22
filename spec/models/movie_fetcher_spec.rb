@@ -11,6 +11,8 @@ RSpec.describe MovieFetcher do
 
     movie = MovieFetcher.new(5)
     expect(movie).to_not be(nil)
+
+    WebMock.allow_net_connect!
   end
 end
 

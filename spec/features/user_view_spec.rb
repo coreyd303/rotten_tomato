@@ -30,8 +30,7 @@ RSpec.describe 'the user view', type: :feature do
       expect(current_path).to eq('/')
     end
 
-    it 'diplays the correct number of movies on the results page' do
-      #requested results defaults to 10
+    it 'diplays the correct number of movies by default on the results page' do
       click_button('Get Last Weekends Box Office Results')
       expect(page).to have_content("10)")
       expect(page).to_not have_content("11)")

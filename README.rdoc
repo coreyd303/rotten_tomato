@@ -6,23 +6,21 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
+Ruby 2.1.2
 
 * Configuration
-
-* Database creation
-
-* Database initialization
+$ clone repo
+$ bundle
+$ bundle exec figaro install
+  - this will add /config/application.yml
+  - add the following to this file:  rotten_tomatoes_api_key: ["your api key"]
 
 * How to run the test suite
+bundle exec rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+[![Code Climate](https://codeclimate.com/github/coreyd303/rotten_tomato/badges/gpa.svg)](https://codeclimate.com/github/coreyd303/rotten_tomato)
 
-* Deployment instructions
-
-* ...
-
+[![Test Coverage](https://codeclimate.com/github/coreyd303/rotten_tomato/badges/coverage.svg)](https://codeclimate.com/github/coreyd303/rotten_tomato)
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
