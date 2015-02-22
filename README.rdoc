@@ -9,11 +9,11 @@ Things you may want to cover:
 Ruby 2.1.2
 
 * Configuration
-$ clone repo /n
-$ bundle
-$ bundle exec figaro install
-  - this will add /config/application.yml
-  - add the following to this file:  rotten_tomatoes_api_key: ["your api key"]
+clone repo
+ - run bundle
+ - run bundle exec figaro install
+   - this will add /config/application.yml
+   - add the following to this file:  rotten_tomatoes_api_key: ["your api key"]
 
 * How to run the test suite
 bundle exec rspec
