@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe FuturesController, type: :controller do
 
   describe 'GET index' do
+    WebMock.allow_net_connect!
+
     before(:each) do 
       5.times do 
-        Movie.create(title:             Faker::Name.name)
+        Movie.create(title: Faker::Name.name)
       end
       m = Movie.all
       @movies = m.collect { |m| m.title }

@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'the user view', type: :feature do 
 
   context 'the home page' do
-    before(:each) do 
+    before(:each) do
+      WebMock.allow_net_connect!
       visit ('/')
     end
 
