@@ -18,6 +18,7 @@ class Movie < ActiveRecord::Base
     m.movie_details_url    = movie["links"]["alternate"]
     m.movie_reviews_url    = movie["links"]["reviews"]
     m.average_rank         = m.find_average
+    m.movie_id             = movie["id"]
     m.save
   end
 end
