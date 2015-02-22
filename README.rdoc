@@ -9,7 +9,7 @@ Things you may want to cover:
 Ruby 2.1.2
 
 * Configuration
-$ clone repo
+$ clone repo /n
 $ bundle
 $ bundle exec figaro install
   - this will add /config/application.yml
