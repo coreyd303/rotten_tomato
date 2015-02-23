@@ -30,6 +30,14 @@ RSpec.describe 'the user view', type: :feature do
       expect(current_path).to eq('/')
     end
 
+    it 'sees reviews for the returned movies' do 
+      click_button('Get Last Weekends Box Office Results')
+      first(:link, 'Reviews').click 
+      expect(page).to have_content('Date')
+      expect(page).to have_content('Critic')
+      expect(page).to have_content('Review')
+    end
+
     it 'diplays the correct number of movies by default on the results page' do
       click_button('Get Last Weekends Box Office Results')
       expect(page).to have_content("10)")
