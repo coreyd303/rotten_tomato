@@ -38,12 +38,6 @@ RSpec.describe 'the user view', type: :feature do
       expect(page).to have_content('Review')
     end
 
-    it 'diplays the correct number of movies by default on the results page' do
-      click_button('Get Last Weekends Box Office Results')
-      expect(page).to have_content("10)")
-      expect(page).to_not have_content("11)")
-    end
-
     it 'sees the future rankings page' do
       expect(current_path).to eq('/')
       click_button('See Future Box Office Rankings')
