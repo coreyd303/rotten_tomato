@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <h1> Reviews for <%= "#{@movie['title']}" %></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2">
+      <%= link_to "MovieYak Home", root_path, class: "btn btn-md btn-primary" %>
+    </div>
+    <div class="col-md-2">
+      <%= link_to "Back to Movies", :back, class: "btn btn-md btn-primary" %>
+    </div>
+    <div class="col-md-4">
+      <%= form_tag("/futures", method: "get") do %>
+        <%= submit_tag "See Future Box Office Rankings", class: "btn btn-md btn-primary" %>
+        <%= select_tag(:num, options_for_select([[2], [3], [4], [5]], 3)) %>
+      <% end %>
+    </div>
+  </div>
+
+  <hr>
+
+  <table class="table">
+    <thead>
+      <th>Date</th>
+      <th>Critic</th>
+      <th>Review</th>
+    </thead>
+    <tbody>
+      <% @reviews["reviews"].each do |r| %>
+      <tr>
+        <td><%= r["date"] %></td>
+        <td><%= r["critic"] %></td>
+        <td><%= r["quote"] %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

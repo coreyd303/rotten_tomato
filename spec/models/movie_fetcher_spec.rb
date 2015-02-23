@@ -6,7 +6,9 @@ RSpec.describe MovieFetcher do
   it "fetches movies from the rotten tomatoes API" do
     WebMock.disable_net_connect!
 
-    stub_request(:get, "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=2cvpqwgtwb9ajwk3tp7g9vcd&limit=6").
+    key = Figaro.env.rotten_tomatoes_api_key
+
+    stub_request(:get, "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/box_office.json?apikey=#{key}&limit=6").
          to_return(:status => 200, :body => "{\"movies\":[{\"title\":\"Fifty Shades of Grey\"}]}" , :headers => {})
 
     movie = MovieFetcher.new(5)

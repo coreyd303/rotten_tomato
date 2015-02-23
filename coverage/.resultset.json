@@ -180,6 +180,7 @@
         null,
         1,
         1,
+        1,
         null
       ],
       "/Users/coreydavis/rotten_tomatos/app/helpers/application_helper.rb": [
@@ -203,6 +204,10 @@
         null
       ],
       "/Users/coreydavis/rotten_tomatos/app/helpers/results_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/helpers/reviews_helper.rb": [
         1,
         null
       ],
@@ -337,11 +342,30 @@
         30,
         30,
         30,
+        30,
         null,
+        null,
+        null
+      ],
+      "/Users/coreydavis/rotten_tomatos/app/models/review_fetcher.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ]
     },
-    "timestamp": 1424645174
+    "timestamp": 1424653342
   }
 }

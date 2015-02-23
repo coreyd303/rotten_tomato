@@ -27,7 +27,7 @@
     Rated: <%= m.mpaa_rating %><br/>
     <%= image_tag(m.poster_thumbnail_url) %>&nbsp
     <%= truncate(m.synopsis, length: 90) %><br/><br/>
-    <%= link_to "Reviews", "http://www.rottentomatoes.com/m/#{m.movie_id}/reviews", class: "btn btn-info" %>
+    <%= link_to "Reviews", reviews_path(movie_id: "#{m.movie_id}"), class: "btn btn-info" %>
     <%= link_to "More Info", m.movie_details_url, class: "btn btn-info" %>
     <br/>
   </div>
